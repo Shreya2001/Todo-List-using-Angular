@@ -1,0 +1,16 @@
+<div class="my-3">
+
+    <h5 [ngClass]="{'strike': !Todo.active}">{{Todo.title}}</h5>
+    <p>{{Todo.descx}}</p>
+
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+        (click)="onCheckboxClick(Todo)" [checked]="!Todo.active">
+        <label class="form-check-label" for="flexCheckDefault">
+          <p>Mark as Done</p>
+        </label>
+      </div>
+
+    <button class="btn btn-sm btn-danger" (click)="onClick(Todo)">Delete</button>
+    
+</div>
